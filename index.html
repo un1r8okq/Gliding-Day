@@ -28,40 +28,50 @@
 [[Close laptop-&gt;Look around the room]] </tw-passagedata><tw-passagedata pid="7" name="Go to the club website" tags="" position="1725,1000" size="100,100">There&#39;s not too many bookings today. You&#39;re duty pilot! Whoops, you probably should have put that on your calendar.
 (set: $awareOfDutyPilot to true)
 [[Check the NOTAMS]]
-[[Close laptop-&gt;Look around the room]]</tw-passagedata><tw-passagedata pid="8" name="Head to the airfield" tags="" position="2200,750" size="100,100">You arrive at the airfield.
+[[Close laptop-&gt;Look around the room]]</tw-passagedata><tw-passagedata pid="8" name="Head to the airfield" tags="" position="2200,750" size="100,100">(if: $completedIMSAFE is 0)[You went to the airfield without remembering to do the IM SAFE checklist. Keith Manch is disappointed in you because you are a terrible pilot.
+Your journey ends here.](else: )[You arrive at the airfield.
 (if: $awareOfDutyPilot is true)[[Go to the clubrooms]]
-[[Head to the hangers]]
+[[Head to the hangers]]]
 
-</tw-passagedata><tw-passagedata pid="9" name="Do the IM SAFE checklist" tags="" position="1250,750" size="100,100">Right... IM SAFE. What does I stand for again?
+</tw-passagedata><tw-passagedata pid="9" name="Do the IM SAFE checklist" tags="" position="1250,750" size="100,100">Right... IM SAFE. What does the &quot;I&quot; stand for again?
+
 [[I dunno]]
 [[Illness]]
 [[I am a great pilot]]
 [[Ick]]</tw-passagedata><tw-passagedata pid="10" name="I dunno" tags="" position="1325,575" size="100,100">That&#39;s not quit right... is it?
+
 [[I guess not-&gt;Do the IM SAFE checklist]]</tw-passagedata><tw-passagedata pid="11" name="Illness" tags="" position="975,725" size="100,100">Right. Illness. You&#39;re feeling pretty well. What comes after illness in IM SAFE?
+
 [[Mountain soaring]]
 [[Munchies]]
 [[Medication]]
 [[Meditation]]</tw-passagedata><tw-passagedata pid="12" name="I am a great pilot" tags="" position="1200,575" size="100,100">If you have to tell yourself that, are you really a great pilot?
-[[I guess not-&gt;Do the IM SAFE checklist]]</tw-passagedata><tw-passagedata pid="13" name="Ick" tags="" position="1450,575" size="100,100">That&#39;s not quit right... is it?
+
+[[I guess not-&gt;Do the IM SAFE checklist]]</tw-passagedata><tw-passagedata pid="13" name="Ick" tags="" position="1450,575" size="100,100">You giving answers like that is giving me the ick. That&#39;s not quite right, is it?
+
 [[I guess not-&gt;Do the IM SAFE checklist]]</tw-passagedata><tw-passagedata pid="14" name="Medication" tags="" position="775,725" size="100,100">That&#39;s right, medication. You haven&#39;t taken anything recently, so you&#39;re all clear on that front. What&#39;s next in IM SAFE?
+
 [[Salvia]]
 [[Stress]]
 [[Sickness]]
-</tw-passagedata><tw-passagedata pid="15" name="Meditation" tags="" position="750,450" size="100,100">It&#39;s not meditation. What comes after illness in IM SAFE?
+</tw-passagedata><tw-passagedata pid="15" name="Meditation" tags="" position="750,450" size="100,100">Meditation is great, but it&#39;s not something to check for before flying. What comes after illness in IM SAFE?
+
 [[Mountain soaring]]
 [[Munchies]]
-[[Medication]]</tw-passagedata><tw-passagedata pid="16" name="Munchies" tags="" position="900,575" size="100,100">You think M stands for Munchies? Maybe you piloting a plane today isn&#39;t a good idea.
+[[Medication]]</tw-passagedata><tw-passagedata pid="16" name="Munchies" tags="" position="900,575" size="100,100">You think M stands for Munchies? Maybe you piloting a plane today isn&#39;t a good idea. What comes after illness in IM SAFE?
 
-What comes after illness in IM SAFE?
 [[Mountain soaring]]
 [[Medication]]
-[[Meditation]]</tw-passagedata><tw-passagedata pid="17" name="Mountain soaring" tags="" position="1000,475" size="100,100">There&#39;s nothing quite like smooth ridge lift off Aoraki, however, that&#39;s not what the CAA was referring to here. What another go
+[[Meditation]]</tw-passagedata><tw-passagedata pid="17" name="Mountain soaring" tags="" position="1000,475" size="100,100">There&#39;s nothing quite like icy strong ridge lift off Aoraki, however, that&#39;s not what the CAA was referring to here. Have another go.
+
 [[Meditation]]
 [[Munchies]]
-[[Medication]]</tw-passagedata><tw-passagedata pid="18" name="Stress" tags="" position="575,700" size="100,100">Correct! Next in IM SAFE?
+[[Medication]]</tw-passagedata><tw-passagedata pid="18" name="Stress" tags="" position="575,700" size="100,100">Correct! You&#39;re not feeling stressed at all, so this isn&#39;t a problem today. Next in IM SAFE?
+
 [[Fortune]]
 [[Fatigue]]
-[[I&#39;m getting Fatigued at how long this checklist is taking]]</tw-passagedata><tw-passagedata pid="19" name="Salvia" tags="" position="600,475" size="100,100">Saliva is... legal in New Zealand. Even if it doesn&#39;t last long, you probably shouldn&#39;t be doing hallucinogens right before a flight. I doubt it&#39;s something that the CAA would recommend. Try again
+[[I&#39;m getting Fatigued at how long this checklist is taking]]</tw-passagedata><tw-passagedata pid="19" name="Salvia" tags="" position="600,475" size="100,100">Saliva is... legal in New Zealand. Even if it doesn&#39;t last long, you probably shouldn&#39;t be doing hallucinogens right before a flight. I doubt it&#39;s something that the CAA would recommend. Try again.
+
 [[Stress]]
 [[Sickness]]
 </tw-passagedata><tw-passagedata pid="20" name="Sickness" tags="" position="725,600" size="100,100">You kinda already covered that with Ilness. Try again...
@@ -69,33 +79,41 @@ What comes after illness in IM SAFE?
 [[Stress]]
 </tw-passagedata><tw-passagedata pid="21" name="Fortune" tags="" position="575,950" size="100,100">The CAA prefers to rely on clear process and safety culture rather than fortune.
 What does the F really stand for in IM SAFE?
+
 [[Fatigue]]
 [[I&#39;m getting Fatigued at how long this checklist is taking]]</tw-passagedata><tw-passagedata pid="22" name="Fatigue" tags="" position="400,700" size="100,100">Yep! It&#39;s important not to fly when you&#39;re tired because it affects your decision making abilities and reaction times. You&#39;re feeling great after a good night&#39;s sleep, so we&#39;re good on this one. What does the last letter of IM SAFE stand for?
+
 [[Eating and drinking]]
 [[Enough already let&#39;s go flying]]</tw-passagedata><tw-passagedata pid="23" name="I was just joking around, geez" tags="" position="700,950" size="100,100">It&#39;s okay to joke around, but interruptions during checklists are usually a bad idea. It makes it easy to miss an item which detracts from safety. So, what does the F in IM SAFE stand for?
 
 [[Fortune]]
-[[Fatigue]]</tw-passagedata><tw-passagedata pid="24" name="You know what, I&#39;m pretty tired" tags="" position="450,950" size="100,100">That&#39;s okay! There are old pilots and there are bold pilots. Your journey ends here - let&#39;s go flying next weekend instead.</tw-passagedata><tw-passagedata pid="25" name="Eating and drinking" tags="" position="250,700" size="100,100">(set: $completedIMSAFE to true)
-Correct! That&#39;s a good reminder, you haven&#39;t eaten yet!
+[[Fatigue]]</tw-passagedata><tw-passagedata pid="24" name="You know what, I&#39;m pretty tired" tags="" position="450,950" size="100,100">That&#39;s okay! There are old pilots and there are bold pilots. Your journey ends here - let&#39;s go flying next weekend instead.</tw-passagedata><tw-passagedata pid="25" name="Eating and drinking" tags="" position="250,700" size="100,100">Correct! That&#39;s a good reminder, you haven&#39;t eaten yet!
+
 [[I&#39;m dieting]]
 [[Grab a bowl of cereal]]
-[[Have a couple pieces of toast]]</tw-passagedata><tw-passagedata pid="26" name="Enough already let&#39;s go flying" tags="" position="400,550" size="100,100">Eagerness to go flying is admirable, but these checklists are born out of real accidents and exist to keep us safe. What does the E in IM SAFE stand for?
+[[Have a couple pieces of toast]]
+(set: $completedIMSAFE to true)</tw-passagedata><tw-passagedata pid="26" name="Enough already let&#39;s go flying" tags="" position="400,550" size="100,100">Eagerness to go flying is admirable, but these checklists are born out of real accidents and exist to keep us safe. What does the E in IM SAFE stand for?
+
 [[Eating and drinking]]</tw-passagedata><tw-passagedata pid="27" name="I&#39;m dieting" tags="" position="250,550" size="100,100">You may very well be dieting, but the brain runs on glucose, and you need to eat something for your brain to be able to make safe decisions in the air.
+
 [[I&#39;m not going to eat anything]]
 [[Grab a bowl of cereal]]
-[[Have a couple pieces of toast]]</tw-passagedata><tw-passagedata pid="28" name="Grab a bowl of cereal" tags="" position="187.5,950" size="100,100">(set: $hasEaten to true)
-Cereal - yum! Now what?
+[[Have a couple pieces of toast]]</tw-passagedata><tw-passagedata pid="28" name="Grab a bowl of cereal" tags="" position="187.5,950" size="100,100">Cereal - yum! Now what?
+
 [[Go open your laptop]]
-[[Leave your apartment]]</tw-passagedata><tw-passagedata pid="29" name="Have a couple pieces of toast" tags="" position="312.5,950" size="100,100">(set: $hasEaten to true)
-Toast - yum! Now what?
+[[Leave your apartment]]
+(set: $hasEaten to true)</tw-passagedata><tw-passagedata pid="29" name="Have a couple pieces of toast" tags="" position="312.5,950" size="100,100">Toast - yum! Now what?
+
 [[Go open your laptop]]
-[[Leave your apartment]]</tw-passagedata><tw-passagedata pid="30" name="I&#39;m not going to eat anything" tags="" position="100,550" size="100,100">I don&#39;t feel like telling a story where you underestimate windshear and stall spin on short final because of brain fog, so your story ends here. Think about going flying when you&#39;ve eaten something.
+[[Leave your apartment]]
+(set: $hasEaten to true)</tw-passagedata><tw-passagedata pid="30" name="I&#39;m not going to eat anything" tags="" position="100,550" size="100,100">I don&#39;t feel like telling a story where you underestimate windshear and stall spin on short final because of brain fog, so your story ends here. Think about going flying when you&#39;ve eaten something.
 
 Your story ends here.</tw-passagedata><tw-passagedata pid="31" name="Check the NOTAMS" tags="" position="1725,1150" size="100,100">Runway 04/22 is closed for bailing silage - that&#39;s going to affect your landing options if something goes wrong. Good to know!
 
 [[Close laptop-&gt;Look around the room]]
 
 (set: $hasNotam to true)</tw-passagedata><tw-passagedata pid="32" name="I&#39;m getting Fatigued at how long this checklist is taking" tags="" position="575,825" size="100,100">Very funny. Aviation regulations are written in the blood of dead pilots, and these checklists exist to keep you safe. If you&#39;re feeling tired, today might not be a good day for flying. This flight is optional. Are you really fatigued, or just having fun?
+
 [[I was just joking around, geez]]
 [[You know what, I&#39;m pretty tired]]</tw-passagedata><tw-passagedata pid="33" name="Go to the clubrooms" tags="" position="2200,875" size="100,100">You unlock the door and head inside.
 (if: $alarmOff is 0)[You hear the beeping of the alarm. You need to enter the code to shut it off, but can&#39;t quite remember which one it is.
@@ -105,14 +123,17 @@ Your story ends here.</tw-passagedata><tw-passagedata pid="31" name="Check the N
 (if: $hasEftposMachine is 0)[[Go get the EFTPOS machine]]
 [[Head to the hangers]]]</tw-passagedata><tw-passagedata pid="34" name="Head to the hangers" tags="" position="2375,750" size="100,100">(if: $awareOfDutyPilot is 0)[Everyone is already here. The instructor says &quot;We were wondering when our duty pilot was going to show up. Didn&#39;t you check the website?&quot;
 
-You&#39;re clearly a terrible pilot. Your journey ends here.]
+You&#39;re not a very good club memeber. Your journey ends here.]
 (else-if: $hasEftposMachine is 0)[The instructor is already at the hangers. They say &quot;Hey, good to see you. Did you grab the EFTPOS machine from the clubrooms?
+
 [[Reply &quot;Whoops, let me go grab it now&quot;-&gt;Go to the clubrooms]]
 [[Reply &quot;I assumed you would get it&quot;]]]
 (else-if: $hasLaptop is 0)[The instructor is already at the hangers. They say &quot;Hey, good to see you. Did you grab the laptop  from the clubrooms?
+
 [[Reply &quot;Whoops, let me go grab it now&quot;-&gt;Go to the clubrooms]]
 [[Reply &quot;I assumed you would get it&quot;]]]
 (else: )[The instructor is already at the hangers. They say &quot;Hey, good to see you. Looks like you remembered the laptop and EFTPOS machine too. Awesome!&quot;
+
 [[&quot;Good to see you too! What&#39;s the plan today? I was hoping to practice some spins.&quot;-&gt;Ask for logbook]]]</tw-passagedata><tw-passagedata pid="35" name="Enter the code 1233" tags="" position="2200,1000" size="100,100">The alarm keeps beeping. Damn, it must be the other way around.
 [[Enter the code 1233-&gt;Same code twice]]
 [[Enter the code 3312]]</tw-passagedata><tw-passagedata pid="36" name="Enter the code 3312" tags="" position="2325,1000" size="100,100">The alarm keeps beeping. Damn, it must be the other way around.
@@ -141,11 +162,11 @@ You&#39;re clearly a terrible pilot. Your journey ends here.]
 [[Hand the instructor your logbook]]]
 (else: )[[&quot;Sorry, I forgot to bring my logbook&quot;]]</tw-passagedata><tw-passagedata pid="45" name="Hand the instructor your logbook" tags="" position="2700,800" size="100,100">This is as far as the story goes for now.
 
+(if: $hasEftposMachine is 0)[You didn&#39;t get the EFTPOS machine which is your job as duty pilot]
+(if: $hasLaptop is 0)[You didn&#39;t get the laptop which is your job as duty pilot]
 (if: $hasNotam is 0)[Too bad you forgot to check the NOTAMs, otherwise you would know that the runway is covered in silage bales. That&#39;s not going to be good for an emergency landing now, is it?]
 (if: $completedIMSAFE is 0)[You didn&#39;t remember the IM SAFE checklist before you left home which is a fail.]
-(else: )[You did great!]</tw-passagedata><tw-passagedata pid="46" name="&quot;Sorry, I forgot to bring my logbook&quot;" tags="" position="2825,800" size="100,100">You&#39;re a terrible pilot. Your journey ends here.</tw-passagedata><tw-passagedata pid="47" name="Look at the poster" tags="" position="1475,750" size="100,100">It&#39;s one of those CAA posters with the IM SAFE checklist.
-(if: $completedIMSAFE is 0)[It&#39;s a good reminder, right now is about the right time to be doing that!]
-(else: )[You&#39;ve already been through that checklist, remember?]
+</tw-passagedata><tw-passagedata pid="46" name="&quot;Sorry, I forgot to bring my logbook&quot;" tags="" position="2825,800" size="100,100">You forgot your logbook! You legally need that to fly.You&#39;re a terrible pilot. Your journey ends here.</tw-passagedata><tw-passagedata pid="47" name="Look at the poster" tags="" position="1475,750" size="100,100">It&#39;s one of those CAA posters with the IM SAFE checklist. (if: $completedIMSAFE is 0)[It&#39;s a good reminder, right now is about the right time to be doing that!](else: )[You&#39;ve already been through that checklist, remember?]
 
 (if: $completedIMSAFE is 0)[[Do the IM SAFE checklist]]
 [[Stop looking at the poster-&gt;Look around the room]]</tw-passagedata></tw-storydata>
